@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&family=Roboto+Mono:wght@300;700&display=swap');
+
+/* Odkazy bez barvy */
+a {
+  color: inherit; 
+}
+
+/* Barvičky */
+:root {
+  --color-light: #DAE2E4;
+  --color-dark: #000000;
+  --color-primary: #9FF500;
+  --color-primary-hover: #000000;
+  --font-header: 'Montserrat', sans-serif;
+  --font-text: 'Montserrat', sans-serif;
+  --font-basic-size: 1.2rem;
+  --form-border-radius: 4px;
+  --form-input-border: 1px solid var(--color-primary);
+}
+
+/* Prostředí */
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 { 
+  color: var(--color-primary);
+  font-family: var(--font-header);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* Navigace */
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1280px;
+  background-color: var(--color-primary-hover);
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Pro Safari */
+  background-color: rgba(45, 70, 45, 0.178); /* Poloprůhledná barva pozadí */
+}
+
+.left-menu {
+  flex: 2; /* Levá část zabere flexibilní šířku */
+  padding: 0; /* Resetování vnitřního odsazení pro levou část */
+}
+
+.right-menu {
+  flex: 1,3; /* Pravá část zabere flexibilní šířku */
+  margin: auto;
+  text-align: right; /* Zarovnání položek v pravé části doprava */
+}
+
+nav ul {
+  display: flex;
+  height: 30px;
+  margin: 30px;
+  padding: 0;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--color-light);
+  transition: all 0.7s ease;
+}
+
+li > a:hover {
+  font-size: 30px;
+  color: var(--color-primary);
+}
+
+li {
+  display: inline-block;
+  padding-left: 30px;
+}
+
+
+
+/* Video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-color: rgba(22, 55, 22, 0.379);
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* Nastavení neprůhlednosti na 20% */
+}
+
+
+
+/* Container */
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+/* Obrázky pro postavy */
+section {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+/* Obrázky GAMES */
+#platba {
+  display: flex;
+  justify-content: center;
+}
+
+.GAME1, .GAME2, .GAME3 {
+  position: relative;
+  font-size: 80px;
+  color: var(--color-light);
+  margin: 50px;
+  transition: all 0.7s ease;
+}
+
+.GAME1:hover, .GAME2:hover, .GAME3:hover {
+  transform: scale(1.7);
+  color: var(--color-primary);
+}
+
+.GAME1:hover p, .GAME2:hover p, .GAME3:hover p {
+  opacity: 1;
+  transform: translateY(80px);
+  transition: all 0.8s;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.GAME1 p, .GAME2 p, .GAME3 p {
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  left: 0;
+  transform: translateX(0%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* TM a jiné chráněné značky */
+#footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: var(--color-light);
+  padding: 10px;
+}
+
+.logo-cat {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Něco čemu nerozumím */
+main {
+  margin: auto;
+  max-width: 700px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 1rem;
+  }
+
+  /* Navigation */
+  nav {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0;
+    padding: 6px;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .png {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--color-light);
+    flex: 1 1 100%;
+  }
+
+  .menu li:first-child {
+    border-top: none;
+  }
+
+  /* Sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .platby1,
+  .platby2,
+  .platby3 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
