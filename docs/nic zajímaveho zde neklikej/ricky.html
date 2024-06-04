@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ricky.css">
+    <title>RickRoll Textová Hra</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="scene" id="introScene">
+            <h1>RickRoll Textová Hra</h1>
+            <p>Jsi na internetu a vidíš odkaz na "Nejlepší videoklip na světě!" Klikneš na něj?</p>
+            <button onclick="rickroll()">Ano</button>
+            <button onclick="safeBrowsing()">Ne</button>
+        </div>
+        <div class="scene" id="rickrollScene">
+            <p>Zobrazí se video Rick Astleyho a slyšíš slavnou píseň 'Never Gonna Give You Up.'</p>
+            <p>Jsi RickRolled! Jak reaguješ?</p>
+            <button onclick="laugh()">Směju se</button>
+            <button onclick="gameOver()">Nadávám</button>
+        </div>
+        <div class="scene" id="safeBrowsingScene">
+            <p>Nepodařilo se ti RickRollovat a dostal jsi textový popis RickAstleyho videoklipu.</p>
+            <p>Co děláš?</p>
+            <button onclick="rickroll()">Zkusím to znovu</button>
+            <button onclick="gameOver()">Uzavřu okno</button>
+        </div>
+        <div class="scene" id="laughScene">
+            <p>Směješ se a pokračuješ ve hře.</p>
+            <p>Pokračuješ ve hledání. Najednou se objeví tajemný odkaz na 'Klikni sem pro nejlepší meme!'</p>
+            <button onclick="rickroll()">Kliknu na odkaz</button>
+            <button onclick="victory()">Ignoruji ho</button>
+        </div>
+        <div class="scene" id="gameOverScene">
+            <h1>Konec hry</h1>
+            <p id="gameOverMessage"></p>
+            <button onclick="restartGame()">Hrát znovu</button>
+        </div>
+        <div class="scene" id="victoryScene">
+            <h1>Gratuluji!</h1>
+            <p>Dokázal jsi projít celou hrou a vyhnout se RickRollování!</p>
+            <p>Děkuji za hraní RickRoll Adventure.</p>
+        </div>
+    </div>
+    <audio id="rickrollAudio" src="https://www.youtube.com/embed/oHg5SJYRHA0"></audio>
+    <script src="ricky.js"></script>
+</body>
+</html>
+
+
